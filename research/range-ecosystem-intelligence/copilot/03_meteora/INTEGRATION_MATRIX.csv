@@ -1,0 +1,10 @@
+feature,meteora_official_surface,jupiter_complement,solana_rpc_or_indexing,historical_data_required,financially_verifiable_now,security_complexity,range_recommendation,source_url,reviewed_date,confidence
+Current pool discovery,DLMM Data API,None,Optional cache and validation,No,Partly,Low,REUSE,https://docs.meteora.ag/developer-guides/dlmm/api-reference/overview,2026-10-21,high
+Position inventory and bins,Data API plus accounts and SDK,None,Yes for account validation,No,Partly,Medium,REUSE WITH VALIDATION,https://docs.meteora.ag/developer-guides/dlmm/program/accounts,2026-10-21,high
+Historical position events,Historical position endpoint plus program events,None,Recommended for reconciliation,Yes,Partly,Medium,EXTEND RESEARCH,https://docs.meteora.ag/developer-guides/dlmm/program/events,2026-10-21,high
+Current exit/rebalance quote,SDK and position data,Swap API quote,Yes if constructing transaction,No,Partly,High,KEEP READ-ONLY FIRST,https://docs.meteora.ag/developer-guides/dlmm/typescript-sdk/getting-started,2026-10-21,high
+Atomic liquidity plus swap workflow,SDK/instructions or Invent,Jupiter build/order may complement,Yes,No,No,High,DEFER,https://docs.meteora.ag/invent/actions,2026-10-21,medium
+Fee/reward claims,SDK/instructions or Invent,None required,Yes,No,Partly,High,DEFER,https://docs.meteora.ag/developer-guides/dlmm/program/instructions,2026-10-21,high
+Limit-order monitoring and execution,SDK/instructions and Data API,None required for protocol order,Yes,No,Partly,High,RESEARCH,https://docs.meteora.ag/developer-guides/dlmm/api-reference/overview,2026-10-21,high
+Cross-protocol LP portfolio,DLMM plus other protocol surfaces,Jupiter prices/routing may help,Custom indexer required,Yes,No,High,DEFER,https://docs.meteora.ag/developer-guides/dlmm/api-reference/overview,2026-10-21,medium
+AI documentation assistance,Documentation MCP and Agent Skill,None,No,No,Not applicable,Low,OPTIONAL LATER,https://docs.meteora.ag/agents/mcp,2026-10-21,high

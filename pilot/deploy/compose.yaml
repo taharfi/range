@@ -1,0 +1,53 @@
+name: lp-exit-pilot
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    init: true
+    env_file: ${PILOT_ENV_FILE:-../.env.production}
+    environment:
+      PILOT_FEEDBACK_DIR: /app/private-data
+      PILOT_LEDGER_DIR: /app/private-data/ledger
+    volumes:
+      - pilot_data:/app/private-data
+    expose:
+      - "3000"
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    pids_limit: 128
+    mem_limit: 768m
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "2"
+  proxy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      app:
+        condition: service_healthy
+    environment:
+      PILOT_SITE_ADDRESS: ${PILOT_SITE_ADDRESS:?Set the approved site address}
+    ports:
+      - "${PILOT_HTTP_BIND:-127.0.0.1:8080}:80"
+      - "${PILOT_HTTPS_BIND:-127.0.0.1:8443}:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "2"
+volumes:
+  pilot_data:
+  caddy_data:
+  caddy_config:

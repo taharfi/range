@@ -1,0 +1,84 @@
+{
+  "tokenX": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+  "tokenY": "So11111111111111111111111111111111111111112",
+  "totalCount": 1,
+  "page": 1,
+  "pageSize": 5,
+  "hasNext": false,
+  "positions": [
+    {
+      "positionAddress": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+      "minPrice": "0.00019771058864438132",
+      "maxPrice": "0.00039943363887223515",
+      "lowerBinId": -325,
+      "upperBinId": -184,
+      "poolActiveBinId": -364,
+      "isOutOfRange": true,
+      "poolActivePrice": "0.00016276218845808177",
+      "feePerTvl24h": "7.7467031062927",
+      "isClosed": true,
+      "createdAt": 1792602158,
+      "closedAt": 1792678263,
+      "updatedAt": 1792678207,
+      "pnlUsd": "-10.921007199386054",
+      "pnlSol": "-0.09486538555480178",
+      "pnlPctChange": "-19.965939830986805",
+      "pnlSolPctChange": "-18.44073671352899",
+      "allTimeDeposits": {
+        "tokenX": {
+          "amount": "1090.007341",
+          "usd": "22.281439595345745",
+          "amountSol": "0.21443382389632526"
+        },
+        "tokenY": {
+          "amount": "0.299999992",
+          "usd": "32.41674787708586",
+          "amountSol": "0.299999992"
+        },
+        "total": {
+          "usd": "54.6981874724316",
+          "sol": "0.5144338158963252"
+        }
+      },
+      "allTimeWithdrawals": {
+        "tokenX": {
+          "amount": "2180.032122",
+          "usd": "41.53282450210713",
+          "amountSol": "0.398152094138629"
+        },
+        "tokenY": {
+          "amount": "0",
+          "usd": "0",
+          "amountSol": "0"
+        },
+        "total": {
+          "usd": "41.53282450210714",
+          "sol": "0.39815209413862906"
+        }
+      },
+      "allTimeFees": {
+        "tokenX": {
+          "amount": "55.59085399999999",
+          "usd": "0.9818967540484491",
+          "amountSol": "0.009369562202894343"
+        },
+        "tokenY": {
+          "amount": "0.012046774",
+          "usd": "1.2624590168899525",
+          "amountSol": "0.012046774"
+        },
+        "total": {
+          "usd": "2.2443557709384017",
+          "sol": "0.021416336202894345"
+        }
+      }
+    }
+  ],
+  "tokenXPrice": "0.017015845538666235",
+  "tokenYPrice": "104.48519913087252",
+  "rewardTokenX": "11111111111111111111111111111111",
+  "rewardTokenY": "11111111111111111111111111111111",
+  "rewardTokenXPrice": "0",
+  "rewardTokenYPrice": "0",
+  "solPrice": "104.48519913087252"
+}

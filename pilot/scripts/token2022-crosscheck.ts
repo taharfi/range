@@ -1,0 +1,9 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {jsonRead,paced} from '../lib/http';
+import {token2022Metadata} from '../lib/mint-metadata';
+const capture=JSON.parse(await readFile('evidence/token2022/mints.json','utf8')),names:Record<number,string>={1:'transferFeeConfig',18:'metadataPointer',19:'tokenMetadata'};
+const response:any=await paced('rpc',250,()=>jsonRead(process.env.SOLANA_RPC_URL||'https://api.mainnet.solana.com',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({jsonrpc:'2.0',id:1,method:'getMultipleAccounts',params:[capture.records.map((r:any)=>r.mint),{encoding:'jsonParsed',commitment:'confirmed'}]})}));
+if(!Array.isArray(response.result?.value))throw Error('Parsed mint response unavailable');
+const comparisons=capture.records.map((r:any,i:number)=>{const value=response.result.value[i],parsed=value?.data?.parsed,info=parsed?.info,decoded=token2022Metadata(r.owner,Buffer.from(r.rawBase64,'base64'),r.expectedDecimals,r.mint);const expected=r.extensions.map((e:any)=>names[e.type]).sort(),actual=info?.extensions?.map((e:any)=>e.extension).sort();return {mint:r.mint,decimals:info?.decimals,initialized:info?.isInitialized,expectedExtensions:expected,parsedExtensions:actual,valuationEligible:decoded.verified,agrees:parsed?.type==='mint'&&value.owner===r.owner&&info.decimals===r.expectedDecimals&&info.isInitialized===true&&JSON.stringify(expected)===JSON.stringify(actual)};});
+const report={at:new Date().toISOString(),rawCaptureSlot:capture.slot,parsedCaptureSlot:response.result.context.slot,status:comparisons.every((c:any)=>c.agrees)?'passed':'mismatch',comparisons};
+await writeFile('evidence/token2022/rpc-crosscheck.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));if(report.status!=='passed')process.exitCode=1;

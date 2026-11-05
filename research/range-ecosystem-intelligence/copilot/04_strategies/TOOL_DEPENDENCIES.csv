@@ -1,0 +1,8 @@
+workflow_step,observed_tools_or_sources,dependency_type,range_current_state,friction_or_risk,source_url,evidence_date,confidence
+Token and pool discovery,LP Army tools directory; MetEngine; LP Agent; Metlab,External product or indexer,Partial current pool and position research,Fragmented metrics and unknown data freshness,https://www.lparmy.com/community-tools,2026-10-21,medium
+Strategy selection,LP Army Strategy Library; Meteora strategy docs,Community guidance,Research-only,Strategy claims are not independent performance evidence,https://www.lparmy.com/strategies,2026-10-21,high
+Range selection,Fibonacci and technical-analysis strategy articles; Meteora DLMM UI,Chart/indicator tools,Partial current position context,Indicator choice can be mistaken for validated edge,https://x.com/ajajakbtc/status/2026535110414381162,2026-10-21,medium
+Position entry,Meteora UI; Ape In; MetEngine; Invent,Protocol execution,Read-only quote comparison,Signing and slippage require explicit user control,https://docs.meteora.ag/invent/actions,2026-10-21,high
+Monitoring,DLMM Alert; Ting; Liquid Nova; RANGE pilot,Alerts and analytics,Not yet unified,False positives, missed alerts and provider outages,https://www.lparmy.com/community-tools,2026-10-21,medium
+Fee and PnL review,LP Agent; HawkFi; Pool Party; RANGE research,Analytics/indexing,Current inventory and fee context,Historical costs and price attribution remain uncertain,https://docs.lpagent.io/introduction,2026-10-21,medium
+Rebalance or exit,Meteora SDK; Jupiter quote; automation tools,Execution and routing,Read-only decision support only,Authority, cost, landing and failure recovery,https://developers.jup.ag/docs/swap,2026-10-21,high

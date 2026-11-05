@@ -1,0 +1,2 @@
+# Exact fingerprints for reviewed synthetic test fixtures only, if needed.
+# Never allowlist real keys or entire source/test directories.

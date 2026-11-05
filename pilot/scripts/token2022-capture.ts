@@ -1,0 +1,10 @@
+import {readFile,mkdir,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {jsonRead,paced} from '../lib/http';
+const audit=JSON.parse(await readFile('evidence/portfolio-correctness/after.json','utf8'));
+const tokens=new Map<string,any>();for(const r of audit.results)for(const p of r.positions??[])for(const t of [p.x,p.y])if(t.program==='TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb')tokens.set(t.mint,t);
+const mints=[...tokens.keys()];
+const response:any=await paced('rpc',250,()=>jsonRead(process.env.SOLANA_RPC_URL||'https://api.mainnet.solana.com',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({jsonrpc:'2.0',id:1,method:'getMultipleAccounts',params:[mints,{encoding:'base64',commitment:'confirmed'}]})}));
+if(!Array.isArray(response.result?.value)||response.result.value.length!==mints.length)throw Error('Mint capture RPC incomplete');
+const records=mints.map((mint,i)=>{const account=response.result.value[i];if(!account)throw Error('Missing mint');const raw=Buffer.from(account.data[0],'base64'),extensions=[];let at=166;while(at+4<=raw.length){const type=raw.readUInt16LE(at),length=raw.readUInt16LE(at+2);if(type===0)break;extensions.push({type,length});at+=4+length;if(at>raw.length)throw Error('Malformed TLV capture');}return {mint,expectedDecimals:tokens.get(mint).decimals,owner:account.owner,rawBase64:raw.toString('base64'),sha256:createHash('sha256').update(raw).digest('hex'),length:raw.length,decimals:raw[44],initialized:raw[45],accountType:raw[165]??null,extensions};});
+await mkdir('evidence/token2022',{recursive:true});await writeFile('evidence/token2022/mints.json',JSON.stringify({at:new Date().toISOString(),slot:response.result.context.slot,records},null,2));console.log(JSON.stringify(records.map(({mint,length,extensions})=>({mint,length,extensions}))));

@@ -1,0 +1,20 @@
+title = "RANGE public source safeguards"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "helius-rpc-credential"
+description = "Helius RPC credential in a URL"
+regex = '''(?i)helius-rpc\.com/[^\s"'<>]*[?&]api-key=([a-z0-9_-]{20,})'''
+secretGroup = 1
+entropy = 3.5
+
+# Reviewed public mint and AMM addresses in documented JSON fields only.
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact public Solana mint/pool references, not credentials"
+regexTarget = "match"
+regexes = [
+  '''(?:ammKey|tokenX|tokenY|tokenXMint|tokenYMint)"\s*:\s*"(?:8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo|AGbqXEi8E5cVCxAbkKcfKXPmR9VZvsE5EKJMhNz92iR9|CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump|CgPgXrTQYe9Qqq77wWoHMaqURP2tya4iA4mcyxhD194z|EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v|FJnaiidSLXFweWkgbinxEHRykVHsnkzDcYbNDR3RF5LN|FkaLnX17cXZGyeu3kZGdHCNdFMJJzBrPPYVvd18B3MZp|So11111111111111111111111111111111111111112|nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump)"'''
+]

@@ -1,0 +1,491 @@
+{
+  "scope": {
+    "address": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+    "from": 1792601558,
+    "until": 1792678863
+  },
+  "transactions": 13,
+  "query_exhausted": true,
+  "events": [
+    {
+      "signature": "5bNCY4padHPBYJCVuvj3vX2PU9Yt6o2qG4SRerSezBBeqQNVXCyBdnaLad445rTURQqNcJLCXgpHBdQdX7taWsJk",
+      "slot": 459706312,
+      "block_time": 1792602158,
+      "outer_index": 1,
+      "inner_index": 1,
+      "event": "PositionCreate",
+      "raw_hex": "e445a52e51cb9a1d908efc549d352579619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM"
+      }
+    },
+    {
+      "signature": "5tu5F9iYTCFFv86o8zfpzxzxFo1SJp2G7v8HhRcRHgesG4d5vS3FRsmbrBrJ1imUJbHYcq2F1mDmd2XVLopErfDV",
+      "slot": 459706312,
+      "block_time": 1792602158,
+      "outer_index": 7,
+      "inner_index": 1,
+      "event": "Rebalancing",
+      "raw_hex": "e445a52e51cb9a1d006d75b33d5bc7c8619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b71248ffffff000000000000000000000000000000000000000000000000d894d0080000000000000000000000000000000000000000bbfeffff00ffffffbbfeffff00ffffff00000000000000000000000000000000",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "active_bin_id": -184,
+        "x_withdrawn_amount": 0,
+        "x_added_amount": 0,
+        "y_withdrawn_amount": 0,
+        "y_added_amount": 147887320,
+        "x_fee_amount": 0,
+        "y_fee_amount": 0,
+        "old_min_id": -325,
+        "old_max_id": -256,
+        "new_min_id": -325,
+        "new_max_id": -256,
+        "rewards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "signature": "54wthrnmUKjc64fmmrvqUEsQt4foDNFHafqYdxtM46TMBUmaikt2PEgBwnqkrtZ9vHPPYyqjHMcdkTfqBFsBtkRo",
+      "slot": 459706312,
+      "block_time": 1792602158,
+      "outer_index": 6,
+      "inner_index": 2,
+      "event": "Rebalancing",
+      "raw_hex": "e445a52e51cb9a1d006d75b33d5bc7c8619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b71248ffffff000000000000000000000000000000000000000000000000d894d0080000000000000000000000000000000000000000bbfeffff00ffffffbbfeffff46ffffff00000000000000000000000000000000",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "active_bin_id": -184,
+        "x_withdrawn_amount": 0,
+        "x_added_amount": 0,
+        "y_withdrawn_amount": 0,
+        "y_added_amount": 147887320,
+        "x_fee_amount": 0,
+        "y_fee_amount": 0,
+        "old_min_id": -325,
+        "old_max_id": -256,
+        "new_min_id": -325,
+        "new_max_id": -186,
+        "rewards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "signature": "5A1cGnnPW2YJjgfkZ2h3hFtesDn3RjUcKHFayQ85z1BanUPh1RhRroxAx2AdbccUKTdYHH1xw2xi6d66wEenmmkF",
+      "slot": 459706312,
+      "block_time": 1792602158,
+      "outer_index": 5,
+      "inner_index": 2,
+      "event": "CompositionFee",
+      "raw_hex": "e445a52e51cb9a1d80977b6a1166718e88aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b71248ff0000000000000000805500000000000000000000000000008c08000000000000",
+      "fields": {
+        "from": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "bin_id": -184,
+        "token_x_fee_amount": 0,
+        "token_y_fee_amount": 21888,
+        "protocol_token_x_fee_amount": 0,
+        "protocol_token_y_fee_amount": 2188
+      }
+    },
+    {
+      "signature": "5A1cGnnPW2YJjgfkZ2h3hFtesDn3RjUcKHFayQ85z1BanUPh1RhRroxAx2AdbccUKTdYHH1xw2xi6d66wEenmmkF",
+      "slot": 459706312,
+      "block_time": 1792602158,
+      "outer_index": 5,
+      "inner_index": 3,
+      "event": "Rebalancing",
+      "raw_hex": "e445a52e51cb9a1d006d75b33d5bc7c8619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b71248ffffff000000000000000000000000000000000000000000000000487940000000000000000000000000000000000000000000bbfeffff46ffffffbbfeffff48ffffff00000000000000000000000000000000",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "active_bin_id": -184,
+        "x_withdrawn_amount": 0,
+        "x_added_amount": 0,
+        "y_withdrawn_amount": 0,
+        "y_added_amount": 4225352,
+        "x_fee_amount": 0,
+        "y_fee_amount": 0,
+        "old_min_id": -325,
+        "old_max_id": -186,
+        "new_min_id": -325,
+        "new_max_id": -184,
+        "rewards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "signature": "P8vq25btPBmtNBLiLd2Y3NmGqWPqyXSkD8paH1wKMYLuLtj5BkxNRPcCJnUB446BREGSmqT6uTkhHdj97ozkbSE",
+      "slot": 459962495,
+      "block_time": 1792656651,
+      "outer_index": 3,
+      "inner_index": 2,
+      "event": "RemoveLiquidity",
+      "raw_hex": "e445a52e51cb9a1d74f461e8671f983a619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada888188aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df620174295be1ba25000000000000000000000000bafeffff",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "from": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "amounts": [
+          633004379,
+          0
+        ],
+        "active_bin_id": -326
+      }
+    },
+    {
+      "signature": "3Xf14JCguSBswsyohmTkohsD17CzFb3nGYMxm8c9XNACtMBHb6wnrPLqGemTeKm6Psw1Cr725UoFo6CK1YFTfw2g",
+      "slot": 459962495,
+      "block_time": 1792656651,
+      "outer_index": 3,
+      "inner_index": 2,
+      "event": "RemoveLiquidity",
+      "raw_hex": "e445a52e51cb9a1d74f461e8671f983a619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada888188aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df62017429ff529c1a000000000000000000000000bafeffff",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "from": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "amounts": [
+          446452479,
+          0
+        ],
+        "active_bin_id": -326
+      }
+    },
+    {
+      "signature": "3tFq3AxnEDk5TVLc8ZNpZrpgHouQuUykegjocqqMaW6WwYENDiQLFmxj6v2kYNFHpM6sc5iH7XnhjXABkvSsTWLF",
+      "slot": 459962495,
+      "block_time": 1792656651,
+      "outer_index": 3,
+      "inner_index": 2,
+      "event": "RemoveLiquidity",
+      "raw_hex": "e445a52e51cb9a1d74f461e8671f983a619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada888188aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742932fea000000000000000000000000000bafeffff",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "from": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "amounts": [
+          10550834,
+          0
+        ],
+        "active_bin_id": -326
+      }
+    },
+    {
+      "signature": "5bXKTLFePKRmiBT4CxNNSznsSQYUjBgwyNnKqVZHdo7izxvLojwa9r5Ffry6xCARran9avdbEhEYCNZcQ4PHqLkQ",
+      "slot": 459962543,
+      "block_time": 1792656661,
+      "outer_index": 6,
+      "inner_index": 1,
+      "event": "Rebalancing",
+      "raw_hex": "e445a52e51cb9a1d006d75b33d5bc7c8619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712bafeffff0000000000000000b853ba25000000000000000000000000000000000000000000000000000000000000000000000000bbfeffff48ffffffbbfeffff48ffffff00000000000000000000000000000000",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "active_bin_id": -326,
+        "x_withdrawn_amount": 0,
+        "x_added_amount": 632968120,
+        "y_withdrawn_amount": 0,
+        "y_added_amount": 0,
+        "x_fee_amount": 0,
+        "y_fee_amount": 0,
+        "old_min_id": -325,
+        "old_max_id": -184,
+        "new_min_id": -325,
+        "new_max_id": -184,
+        "rewards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "signature": "2AEpY7ewj1bUUUYCos92Jw4MMu6JrNobmZanpfZg64X3asewipporKbP57U9TY4uPcD2RVsXRVPdMKHsqku9MR4X",
+      "slot": 459962543,
+      "block_time": 1792656661,
+      "outer_index": 6,
+      "inner_index": 1,
+      "event": "Rebalancing",
+      "raw_hex": "e445a52e51cb9a1d006d75b33d5bc7c8619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712bafeffff0000000000000000c70b9c1a000000000000000000000000000000000000000000000000000000000000000000000000bbfeffff48ffffffbbfeffff48ffffff00000000000000000000000000000000",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "active_bin_id": -326,
+        "x_withdrawn_amount": 0,
+        "x_added_amount": 446434247,
+        "y_withdrawn_amount": 0,
+        "y_added_amount": 0,
+        "x_fee_amount": 0,
+        "y_fee_amount": 0,
+        "old_min_id": -325,
+        "old_max_id": -184,
+        "new_min_id": -325,
+        "new_max_id": -184,
+        "rewards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "signature": "38Haj7xTfcUtT9X4R2uA32w4az3QnkVEhqpfP5oSVJ2QqU3LtmULHVdQz1wrd9kvHaYc1UgF7jYQNBsN1b8HTPv6",
+      "slot": 459962543,
+      "block_time": 1792656661,
+      "outer_index": 5,
+      "inner_index": 1,
+      "event": "Rebalancing",
+      "raw_hex": "e445a52e51cb9a1d006d75b33d5bc7c8619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712bafeffff0000000000000000aed1a100000000000000000000000000000000000000000000000000000000000000000000000000bbfeffff48ffffffbbfeffff48ffffff00000000000000000000000000000000",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "active_bin_id": -326,
+        "x_withdrawn_amount": 0,
+        "x_added_amount": 10604974,
+        "y_withdrawn_amount": 0,
+        "y_added_amount": 0,
+        "x_fee_amount": 0,
+        "y_fee_amount": 0,
+        "old_min_id": -325,
+        "old_max_id": -184,
+        "new_min_id": -325,
+        "new_max_id": -184,
+        "rewards": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "signature": "24FthWayHZvqpXU6r5rXuUTLHDKF14L8tEX5L5GMJrt5GVvJ5wouhWgeE19y2PW1FC9pid3icicis8oEhPksbezS",
+      "slot": 460064315,
+      "block_time": 1792678263,
+      "outer_index": 5,
+      "inner_index": 2,
+      "event": "RemoveLiquidity",
+      "raw_hex": "e445a52e51cb9a1d74f461e8671f983a619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada888188aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df620174297996ba250000000000000000000000009bfeffff",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "from": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "amounts": [
+          632985209,
+          0
+        ],
+        "active_bin_id": -357
+      }
+    },
+    {
+      "signature": "24FthWayHZvqpXU6r5rXuUTLHDKF14L8tEX5L5GMJrt5GVvJ5wouhWgeE19y2PW1FC9pid3icicis8oEhPksbezS",
+      "slot": 460064315,
+      "block_time": 1792678263,
+      "outer_index": 6,
+      "inner_index": 2,
+      "event": "ClaimFee",
+      "raw_hex": "e445a52e51cb9a1d4b7a9a308c4a7ba3619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b71221f2c50200000000bc40990000000000",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "fee_x": 46527009,
+        "fee_y": 10043580
+      }
+    },
+    {
+      "signature": "24FthWayHZvqpXU6r5rXuUTLHDKF14L8tEX5L5GMJrt5GVvJ5wouhWgeE19y2PW1FC9pid3icicis8oEhPksbezS",
+      "slot": 460064315,
+      "block_time": 1792678263,
+      "outer_index": 6,
+      "inner_index": 3,
+      "event": "ClaimFee2",
+      "raw_hex": "e445a52e51cb9a1de8abf2613a4d232d619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b71221f2c50200000000bc409900000000009bfeffff",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "fee_x": 46527009,
+        "fee_y": 10043580,
+        "active_bin_id": -357
+      }
+    },
+    {
+      "signature": "57rQzgMMgzH21U1KDzv5oXpPTNRTeadCVgmfL9jY8BChNRyK8Ks7MVRaU8wfRpBki3ogdd7DPK3zAvQvhJcg5qAG",
+      "slot": 460064315,
+      "block_time": 1792678263,
+      "outer_index": 5,
+      "inner_index": 2,
+      "event": "RemoveLiquidity",
+      "raw_hex": "e445a52e51cb9a1d74f461e8671f983a619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada888188aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df62017429c70b9c1a0000000000000000000000009bfeffff",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "from": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "amounts": [
+          446434247,
+          0
+        ],
+        "active_bin_id": -357
+      }
+    },
+    {
+      "signature": "57rQzgMMgzH21U1KDzv5oXpPTNRTeadCVgmfL9jY8BChNRyK8Ks7MVRaU8wfRpBki3ogdd7DPK3zAvQvhJcg5qAG",
+      "slot": 460064315,
+      "block_time": 1792678263,
+      "outer_index": 6,
+      "inner_index": 2,
+      "event": "ClaimFee",
+      "raw_hex": "e445a52e51cb9a1d4b7a9a308c4a7ba3619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712f927880000000000500a1e0000000000",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "fee_x": 8923129,
+        "fee_y": 1968720
+      }
+    },
+    {
+      "signature": "57rQzgMMgzH21U1KDzv5oXpPTNRTeadCVgmfL9jY8BChNRyK8Ks7MVRaU8wfRpBki3ogdd7DPK3zAvQvhJcg5qAG",
+      "slot": 460064315,
+      "block_time": 1792678263,
+      "outer_index": 6,
+      "inner_index": 3,
+      "event": "ClaimFee2",
+      "raw_hex": "e445a52e51cb9a1de8abf2613a4d232d619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712f927880000000000500a1e00000000009bfeffff",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "fee_x": 8923129,
+        "fee_y": 1968720,
+        "active_bin_id": -357
+      }
+    },
+    {
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "slot": 460064315,
+      "block_time": 1792678263,
+      "outer_index": 5,
+      "inner_index": 2,
+      "event": "RemoveLiquidity",
+      "raw_hex": "e445a52e51cb9a1d74f461e8671f983a619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada888188aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df62017429aed1a1000000000000000000000000009bfeffff",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "from": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "amounts": [
+          10604974,
+          0
+        ],
+        "active_bin_id": -357
+      }
+    },
+    {
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "slot": 460064315,
+      "block_time": 1792678263,
+      "outer_index": 6,
+      "inner_index": 2,
+      "event": "ClaimFee",
+      "raw_hex": "e445a52e51cb9a1d4b7a9a308c4a7ba3619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712ac25020000000000aa86000000000000",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "fee_x": 140716,
+        "fee_y": 34474
+      }
+    },
+    {
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "slot": 460064315,
+      "block_time": 1792678263,
+      "outer_index": 6,
+      "inner_index": 3,
+      "event": "ClaimFee2",
+      "raw_hex": "e445a52e51cb9a1de8abf2613a4d232d619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712ac25020000000000aa860000000000009bfeffff",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+        "fee_x": 140716,
+        "fee_y": 34474,
+        "active_bin_id": -357
+      }
+    },
+    {
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "slot": 460064315,
+      "block_time": 1792678263,
+      "outer_index": 7,
+      "inner_index": 0,
+      "event": "PositionClose",
+      "raw_hex": "e445a52e51cb9a1dffc4106b1cca3580985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712",
+      "fields": {
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM"
+      }
+    }
+  ],
+  "event_counts": {
+    "PositionCreate": 1,
+    "Rebalancing": 6,
+    "CompositionFee": 1,
+    "RemoveLiquidity": 6,
+    "ClaimFee": 3,
+    "ClaimFee2": 3,
+    "PositionClose": 1
+  },
+  "decode_errors": 0,
+  "observed_boundaries": [
+    {
+      "signature": "5bNCY4padHPBYJCVuvj3vX2PU9Yt6o2qG4SRerSezBBeqQNVXCyBdnaLad445rTURQqNcJLCXgpHBdQdX7taWsJk",
+      "slot": 459706312,
+      "block_time": 1792602158,
+      "outer_index": 1,
+      "inner_index": 1,
+      "event": "PositionCreate",
+      "raw_hex": "e445a52e51cb9a1d908efc549d352579619528962a29cf02eb4c4e166fe8c017f80aaf9b0ffaeca4f71570394ada8881985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712",
+      "fields": {
+        "lb_pair": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM"
+      }
+    },
+    {
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "slot": 460064315,
+      "block_time": 1792678263,
+      "outer_index": 7,
+      "inner_index": 0,
+      "event": "PositionClose",
+      "raw_hex": "e445a52e51cb9a1dffc4106b1cca3580985a9478740b33aa3d40b7c20637d84cffc86f80ed6954aceb9402df6201742988aa23cc9b681853798838e626193b2e376688281bad65264acc90cc2d38b712",
+      "fields": {
+        "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+        "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM"
+      }
+    }
+  ],
+  "idl_sha256": "045c0f4af044be046b6a14b350077e4242e8ac026b64a855803dab30fcdd8b35",
+  "classification": "Pinned-IDL event observations; not a reconciled lifecycle or P&L",
+  "limitations": [
+    "All decoded events retained, including other positions and unknown events.",
+    "A query boundary is not proof of exhaustive lifetime history or no account reuse.",
+    "Failed transactions and missing metadata remain in the checkpoint but produce no successful DLMM events.",
+    "Transaction fees are not allocated between positions or wallet actions.",
+    "RPC JSON numeric balance fields have not been certified lossless; use raw instruction/event integers for accounting.",
+    "Historical USD prices and return-versus-hold are not calculated."
+  ]
+}

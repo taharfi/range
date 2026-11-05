@@ -1,0 +1,16 @@
+node_modules
+.next
+.env*
+!.env.example
+!.env.production.example
+.pilot-feedback
+var
+test-results
+playwright-report
+evidence
+tests
+e2e
+*.tsbuildinfo
+deploy/*.env
+deploy/secrets
+*.log

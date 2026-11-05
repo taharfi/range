@@ -1,0 +1,108 @@
+﻿{
+  "address": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+  "interval": {
+    "address": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+    "from": 1792601558,
+    "until": 1792678863
+  },
+  "pages": 2,
+  "transactions": 13,
+  "queryExhausted": true,
+  "coverage": "query-only-unreconciled",
+  "failedTransactions": 0,
+  "missingMetadata": 0,
+  "signatures": [
+    {
+      "signature": "5bNCY4padHPBYJCVuvj3vX2PU9Yt6o2qG4SRerSezBBeqQNVXCyBdnaLad445rTURQqNcJLCXgpHBdQdX7taWsJk",
+      "slot": 459706312,
+      "at": 1792602158,
+      "observedTransactionFeeLamports": 10000,
+      "solscan": "https://solscan.io/tx/5bNCY4padHPBYJCVuvj3vX2PU9Yt6o2qG4SRerSezBBeqQNVXCyBdnaLad445rTURQqNcJLCXgpHBdQdX7taWsJk"
+    },
+    {
+      "signature": "5tu5F9iYTCFFv86o8zfpzxzxFo1SJp2G7v8HhRcRHgesG4d5vS3FRsmbrBrJ1imUJbHYcq2F1mDmd2XVLopErfDV",
+      "slot": 459706312,
+      "at": 1792602158,
+      "observedTransactionFeeLamports": 145000,
+      "solscan": "https://solscan.io/tx/5tu5F9iYTCFFv86o8zfpzxzxFo1SJp2G7v8HhRcRHgesG4d5vS3FRsmbrBrJ1imUJbHYcq2F1mDmd2XVLopErfDV"
+    },
+    {
+      "signature": "54wthrnmUKjc64fmmrvqUEsQt4foDNFHafqYdxtM46TMBUmaikt2PEgBwnqkrtZ9vHPPYyqjHMcdkTfqBFsBtkRo",
+      "slot": 459706312,
+      "at": 1792602158,
+      "observedTransactionFeeLamports": 145000,
+      "solscan": "https://solscan.io/tx/54wthrnmUKjc64fmmrvqUEsQt4foDNFHafqYdxtM46TMBUmaikt2PEgBwnqkrtZ9vHPPYyqjHMcdkTfqBFsBtkRo"
+    },
+    {
+      "signature": "5A1cGnnPW2YJjgfkZ2h3hFtesDn3RjUcKHFayQ85z1BanUPh1RhRroxAx2AdbccUKTdYHH1xw2xi6d66wEenmmkF",
+      "slot": 459706312,
+      "at": 1792602158,
+      "observedTransactionFeeLamports": 145000,
+      "solscan": "https://solscan.io/tx/5A1cGnnPW2YJjgfkZ2h3hFtesDn3RjUcKHFayQ85z1BanUPh1RhRroxAx2AdbccUKTdYHH1xw2xi6d66wEenmmkF"
+    },
+    {
+      "signature": "P8vq25btPBmtNBLiLd2Y3NmGqWPqyXSkD8paH1wKMYLuLtj5BkxNRPcCJnUB446BREGSmqT6uTkhHdj97ozkbSE",
+      "slot": 459962495,
+      "at": 1792656651,
+      "observedTransactionFeeLamports": 61545,
+      "solscan": "https://solscan.io/tx/P8vq25btPBmtNBLiLd2Y3NmGqWPqyXSkD8paH1wKMYLuLtj5BkxNRPcCJnUB446BREGSmqT6uTkhHdj97ozkbSE"
+    },
+    {
+      "signature": "3Xf14JCguSBswsyohmTkohsD17CzFb3nGYMxm8c9XNACtMBHb6wnrPLqGemTeKm6Psw1Cr725UoFo6CK1YFTfw2g",
+      "slot": 459962495,
+      "at": 1792656651,
+      "observedTransactionFeeLamports": 60794,
+      "solscan": "https://solscan.io/tx/3Xf14JCguSBswsyohmTkohsD17CzFb3nGYMxm8c9XNACtMBHb6wnrPLqGemTeKm6Psw1Cr725UoFo6CK1YFTfw2g"
+    },
+    {
+      "signature": "3tFq3AxnEDk5TVLc8ZNpZrpgHouQuUykegjocqqMaW6WwYENDiQLFmxj6v2kYNFHpM6sc5iH7XnhjXABkvSsTWLF",
+      "slot": 459962495,
+      "at": 1792656651,
+      "observedTransactionFeeLamports": 145000,
+      "solscan": "https://solscan.io/tx/3tFq3AxnEDk5TVLc8ZNpZrpgHouQuUykegjocqqMaW6WwYENDiQLFmxj6v2kYNFHpM6sc5iH7XnhjXABkvSsTWLF"
+    },
+    {
+      "signature": "5bXKTLFePKRmiBT4CxNNSznsSQYUjBgwyNnKqVZHdo7izxvLojwa9r5Ffry6xCARran9avdbEhEYCNZcQ4PHqLkQ",
+      "slot": 459962543,
+      "at": 1792656661,
+      "observedTransactionFeeLamports": 125900,
+      "solscan": "https://solscan.io/tx/5bXKTLFePKRmiBT4CxNNSznsSQYUjBgwyNnKqVZHdo7izxvLojwa9r5Ffry6xCARran9avdbEhEYCNZcQ4PHqLkQ"
+    },
+    {
+      "signature": "2AEpY7ewj1bUUUYCos92Jw4MMu6JrNobmZanpfZg64X3asewipporKbP57U9TY4uPcD2RVsXRVPdMKHsqku9MR4X",
+      "slot": 459962543,
+      "at": 1792656661,
+      "observedTransactionFeeLamports": 125600,
+      "solscan": "https://solscan.io/tx/2AEpY7ewj1bUUUYCos92Jw4MMu6JrNobmZanpfZg64X3asewipporKbP57U9TY4uPcD2RVsXRVPdMKHsqku9MR4X"
+    },
+    {
+      "signature": "38Haj7xTfcUtT9X4R2uA32w4az3QnkVEhqpfP5oSVJ2QqU3LtmULHVdQz1wrd9kvHaYc1UgF7jYQNBsN1b8HTPv6",
+      "slot": 459962543,
+      "at": 1792656661,
+      "observedTransactionFeeLamports": 105600,
+      "solscan": "https://solscan.io/tx/38Haj7xTfcUtT9X4R2uA32w4az3QnkVEhqpfP5oSVJ2QqU3LtmULHVdQz1wrd9kvHaYc1UgF7jYQNBsN1b8HTPv6"
+    },
+    {
+      "signature": "24FthWayHZvqpXU6r5rXuUTLHDKF14L8tEX5L5GMJrt5GVvJ5wouhWgeE19y2PW1FC9pid3icicis8oEhPksbezS",
+      "slot": 460064315,
+      "at": 1792678263,
+      "observedTransactionFeeLamports": 66804,
+      "solscan": "https://solscan.io/tx/24FthWayHZvqpXU6r5rXuUTLHDKF14L8tEX5L5GMJrt5GVvJ5wouhWgeE19y2PW1FC9pid3icicis8oEhPksbezS"
+    },
+    {
+      "signature": "57rQzgMMgzH21U1KDzv5oXpPTNRTeadCVgmfL9jY8BChNRyK8Ks7MVRaU8wfRpBki3ogdd7DPK3zAvQvhJcg5qAG",
+      "slot": 460064315,
+      "at": 1792678263,
+      "observedTransactionFeeLamports": 57824,
+      "solscan": "https://solscan.io/tx/57rQzgMMgzH21U1KDzv5oXpPTNRTeadCVgmfL9jY8BChNRyK8Ks7MVRaU8wfRpBki3ogdd7DPK3zAvQvhJcg5qAG"
+    },
+    {
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "slot": 460064315,
+      "at": 1792678263,
+      "observedTransactionFeeLamports": 145000,
+      "solscan": "https://solscan.io/tx/4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD"
+    }
+  ],
+  "notice": "One bounded page; rerun identical arguments to resume. Exhausting this query does not prove a complete lifecycle, closure, wallet history or P&L. Transaction fees may cover multiple positions and are not yet allocated."
+}

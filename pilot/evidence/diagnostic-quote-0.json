@@ -1,0 +1,61 @@
+{
+  "request": {
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "amount": "48326888403",
+    "slippageBps": "50"
+  },
+  "response": {
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "inAmount": "48326888403",
+    "outAmount": "5079084422",
+    "otherAmountThreshold": "5079084422",
+    "swapMode": "ExactIn",
+    "slippageBps": 0,
+    "priceImpactPct": "-0.00023950247304621103",
+    "routePlan": [
+      {
+        "percent": 100,
+        "bps": 10000,
+        "usdValue": 5078.737489870671,
+        "swapInfo": {
+          "ammKey": "FkaLnX17cXZGyeu3kZGdHCNdFMJJzBrPPYVvd18B3MZp",
+          "label": "JupiterZ",
+          "inputMint": "So11111111111111111111111111111111111111112",
+          "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "inAmount": "48326888403",
+          "outAmount": "5079084422"
+        }
+      }
+    ],
+    "feeMint": "So11111111111111111111111111111111111111112",
+    "feeBps": 2,
+    "transaction": null,
+    "gasless": true,
+    "jitOptimized": false,
+    "signatureFeeLamports": 0,
+    "signatureFeePayer": null,
+    "prioritizationFeeLamports": 0,
+    "prioritizationFeePayer": null,
+    "rentFeeLamports": 0,
+    "rentFeePayer": null,
+    "requestId": "01a1573e-0a4d-77c8-8ec5-779c9a0f335f",
+    "swapType": "rfq",
+    "router": "jupiterz",
+    "guaranteedPrice": true,
+    "quoteId": "9cf662d2-074c-5404-ae80-029275194ce7",
+    "maker": "FkaLnX17cXZGyeu3kZGdHCNdFMJJzBrPPYVvd18B3MZp",
+    "taker": null,
+    "platformFee": {
+      "feeBps": 2,
+      "feeMint": "So11111111111111111111111111111111111111112"
+    },
+    "inUsdValue": 5079.9541514529055,
+    "outUsdValue": 5078.737489870671,
+    "swapUsdValue": 5078.737489870671,
+    "priceImpact": -0.023950247304621104,
+    "mode": "manual",
+    "totalTime": 86
+  }
+}
