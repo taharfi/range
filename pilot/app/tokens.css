@@ -5,14 +5,15 @@
   --color-raised: #202D32;
   --color-text: #F2F4F1;
   --color-muted: #9BA8A7;
-  --color-accent: #C5F27C;
-  --color-accent-hover: #D4F79F;
+  --color-accent: #F54B00;
+  --color-accent-text: #FF8959;
+  --color-accent-hover: #FF6A2B;
   --color-warning: #E9B86B;
   --color-danger: #F2A69B;
   --color-line: #364448;
   --color-line-soft: #29363B;
   --color-control-line: #607174;
-  --color-accent-tint: #202D24;
+  --color-accent-tint: #332019;
   --color-warning-tint: #302A20;
   --color-danger-tint: #342526;
   --font-ui: var(--font-geist), Arial, sans-serif;

@@ -9,7 +9,7 @@ export function Icon({name}:{name:"arrow"|"download"|"refresh"|"lock"}) {
 }
 export function Brand(){return <a className="brand" href="/" aria-label="RANGE home">
   <svg className="brand-symbol" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M10 5H5v22h5M22 5h5v22h-5M5 16h22" stroke="currentColor" strokeWidth="2"/><path d="M16 10v12" stroke="currentColor" strokeWidth="3"/></svg>
-  <svg className="brand-wordmark" width="132" height="44" viewBox="0 0 164 52" fill="none" aria-hidden="true"><g stroke="currentColor" strokeWidth="5" strokeLinecap="square"><path d="M5 35V15m0 9c0-7 5-10 12-9M44 35V15m0 10c0-15-22-15-22 0s22 15 22 0M56 35V15m0 10c0-14 22-14 22 0v10M111 15v22c0 13-20 13-22 5m22-17c0-15-22-15-22 0s22 15 22 0M123 25h22c0-15-22-15-22 0 0 12 14 15 22 7"/></g><path d="M154 30h6v6h-6z" fill="var(--color-accent, #C5F27C)"/></svg>
+  <svg className="brand-wordmark" width="132" height="44" viewBox="0 0 164 52" fill="none" aria-hidden="true"><g stroke="currentColor" strokeWidth="5" strokeLinecap="square"><path d="M5 35V15m0 9c0-7 5-10 12-9M44 35V15m0 10c0-15-22-15-22 0s22 15 22 0M56 35V15m0 10c0-14 22-14 22 0v10M111 15v22c0 13-20 13-22 5m22-17c0-15-22-15-22 0s22 15 22 0M123 25h22c0-15-22-15-22 0 0 12 14 15 22 7"/></g><path d="M154 30h6v6h-6z" fill="var(--color-accent, #F54B00)"/></svg>
   </a>;}
 export function RangeStatus({status}:{status:Position["rangeStatus"]}){return <span className={`range-status ${status}`}><span aria-hidden="true"/>{status.replaceAll("-"," ")}</span>;}
 export function RangeDiagram({position:p,compact=false}:{position:Position;compact?:boolean}){
