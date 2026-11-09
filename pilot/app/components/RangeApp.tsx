@@ -9,6 +9,7 @@ import { Feedback } from "./Feedback";
 import { DataCoverage } from "./DataCoverage";
 import { refreshedSelection } from "../recovery";
 import { Portfolio } from "./Portfolio";
+import {PositionValue} from "./PositionValue";
 import { mergePortfolio,replacePortfolioPosition } from "../portfolio";
 
 const SOL="So11111111111111111111111111111111111111112",USDC="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v";
@@ -149,7 +150,7 @@ export default function Page(){
   {screen==="position"&&<section className="position-screen" aria-label="Position">
    {p?<>{results&&results.positions.length>1&&<label className="position-picker">Select position<select value={selected} onChange={e=>{setSelected(e.target.value);setBrief(null);setError(null);setAction("hold");}} disabled={!!busy}>{results.positions.map(v=><option value={v.address} key={v.address}>{v.pair} · {short(v.address)}</option>)}</select></label>}
     <div className="position-heading"><div><span className="eyebrow">{demo?"Demo · synthetic data":"Meteora DLMM · indexed estimate"}</span><h1 tabIndex={-1}>{p.pair}</h1></div><RangeStatus status={p.rangeStatus}/></div>
-    <div className="position-metrics"><div><span className="metric-label">Position value · USD</span><strong className="value-unavailable">Unavailable</strong><p className="supporting">Individual USD valuation is not available in this view.</p></div><div><span className="metric-label">Unclaimed fees</span><div className="fee-amount">{amount(p.fees.x)} <small>{p.x.symbol}</small><br/>{amount(p.fees.y)} <small>{p.y.symbol}</small></div><p className="supporting">Separate from principal; claim costs unpriced.{p.rewardsPresent?" Rewards also excluded.":""}</p></div></div>
+    <div className="position-metrics"><div><PositionValue position={p} now={now} demo={demo}/></div><div><span className="metric-label">Unclaimed fees</span><div className="fee-amount">{amount(p.fees.x)} <small>{p.x.symbol}</small><br/>{amount(p.fees.y)} <small>{p.y.symbol}</small></div><p className="supporting">Separate from principal; claim costs unpriced.{p.rewardsPresent?" Rewards also excluded.":""}</p></div></div>
     <RangeDiagram position={p}/>
     <div className="position-footer"><span className={stale&&!demo?"freshness stale":"freshness"}>{demo?"Invented demo values":p.updatedAt?`Snapshot ${age(p.updatedAt*1000,now)}`:"Timestamp unavailable"}</span>{!demo&&<button className="text-button" disabled={!!busy} onClick={()=>runLookup({kind:"position",address:p.address},false,"detail")}>Refresh position</button>}</div>
     {refreshNotice&&<p className="supporting" role="status">{refreshNotice}</p>}

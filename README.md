@@ -1,5 +1,7 @@
 # Jupiter × Meteora Research Engine
 
+Local testing: [2026-11-09 validation guide](LOCAL_VALIDATION_READINESS.md) covers individual current-value estimates, quote/valuation refresh, local rehearsal and the still-unmet real-user gates.
+
 2026-11-09: [one-position closed lifecycle reconciliation](CLOSED_POSITION_RECONCILIATION_PILOT.md) is available under Closed > Saved on-chain evidence. Token transfers/balances reconcile; historical USD P&L and allocated economic costs remain unavailable. The daily GitHub task passed an actual no-change scheduled run.
 
 Historical recovery, 2026-11-05: added a bounded, checkpointed Helius operator importer and reused the pinned DLMM decoder on an existing closed-position fixture. Recovered 13 transactions and decoded matching creation/closure events; cash flows and historical USD P&L remain unreconciled. See [implementation, evidence and reproduction](HELIUS_HISTORY_FOUNDATION.md). Portfolio UI and financial claims are unchanged.

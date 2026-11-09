@@ -2,7 +2,7 @@ import {randomUUID} from 'node:crypto';
 import bs58 from 'bs58';
 import {address,discoverWalletPoolPage,walletHydrator,save,SOL,exitToken,decodePositionPrefix,DLMM_PROGRAM,POSITION_DISCRIMINATOR} from './meteora';
 import type {Position} from './models';
-import {currentMarks,validateMark,valuationEligible,valuePositions,type Mark,type Valuation} from './current-prices';
+import {currentMarks,validateMark,valuationEligible,valuedPositions,type Mark,type Valuation} from './current-prices';
 import {jsonRead,paced,PilotError} from './http';
 export type Issue={address:string|null;reason:string};
 export type AggregateSummary={status:'running'|'ready'|'failed';discovered:number;indexed:number|null;pools:number;inRange:number;outOfRange:number;unknownRange:number;complete:boolean;issues:Issue[];issueCount?:number;valuation:Valuation|null;updatedAt:number;verifiedOpen:number;onchainDiscovered?:number|null;verificationSlot?:number|null;error?:string};
@@ -34,9 +34,7 @@ export async function aggregate(deps:Dependencies,progress:(count:number,positio
  if(deps.verify){try{const check=await deps.verify(positions);positions=check.positions;issues.push(...check.issues);verified=check.verified;onchainCount=check.onchainCount??null;verificationSlot=check.slot??null;}catch{issues.push({address:null,reason:'Independent account status/discovery verification failed; indexed observations remain unverified.'});}}
  const complete=issues.length===0&&indexed!==null&&indexed===positions.length;
  let marks:Mark[]=[];try{marks=await deps.marks(positions);}catch{issues.push({address:null,reason:'Current pricing provider unavailable.'});marks=[...new Map(positions.flatMap(p=>[p.x,p.y]).map(t=>[t.mint,t])).values()].map(t=>{const mark=validateMark(t,null,null);return valuationEligible(t)?{...mark,code:'PRICE_PROVIDER_FAILED',reason:'Current pricing provider unavailable'}:mark;});}
- const coverageByPosition=new Map<string,import('./current-prices').PositionCoverage>();
- const valuation=valuePositions(positions,marks,complete,Date.now(),(key,result)=>coverageByPosition.set(key,result));
- positions=positions.map(p=>({...p,valuationCoverage:coverageByPosition.get(p.address)}));
+ const priced=valuedPositions(positions,marks,complete);positions=priced.positions;const valuation=priced.valuation;
  const summary:AggregateSummary={status:'ready',discovered:positions.length,indexed,pools:pools.size,inRange:positions.filter(p=>p.rangeStatus==='in-range').length,outOfRange:positions.filter(p=>p.rangeStatus==='out-of-range').length,unknownRange:positions.filter(p=>p.rangeStatus==='unknown').length,complete,issues:issues.slice(0,20),issueCount:issues.length,valuation,updatedAt:Date.now(),verifiedOpen:verified,onchainDiscovered:onchainCount,verificationSlot};
  return {positions,summary};
 }

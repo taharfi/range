@@ -6,6 +6,7 @@ export type CoverageCode='MINT_UNVERIFIED'|'MINT_UNSUPPORTED_PROGRAM'|'MINT_UNSU
 export function valuationEligible(token:Token):boolean{return token.valuationVerified??token.verified;}
 function mintCode(token:Token):CoverageCode|null{return valuationEligible(token)?null:token.valuationMetadata?.status==='unsupported-extensions'?'MINT_UNSUPPORTED_EXTENSIONS':token.valuationMetadata?.status==='invalid'?'MINT_UNVERIFIED':token.program&&token.program!==TOKEN_PROGRAM?'MINT_UNSUPPORTED_PROGRAM':'MINT_UNVERIFIED';}
 export type PositionCoverage={principal:boolean;fees:boolean;issues:{component:'principal'|'fees';side:'x'|'y';mint:string;code:CoverageCode}[]};
+export type PositionValuation={principalUsd:string|null;feesUsd:string|null;at:number;expiresAt:number;marks:Mark[]};
 export type Mark={mint:string;usd:string|null;decimals:number;slot:number|null;at:number|null;retrievedAt:number;status:'fresh'|'stale'|'unavailable';source:'Jupiter Price V3';reason?:string;code?:CoverageCode};
 export type Valuation={principalUsd:string;feesUsd:string;principalSol:string|null;feesSol:string|null;valuedPositions:number;feeValuedPositions:number;totalPositions:number;complete:boolean;feesComplete:boolean;unpricedMints:string[];marks:Mark[];at:number;expiresAt:number;markCount:number;unpricedMintCount:number;reasonCounts?:Partial<Record<CoverageCode,number>>;valuationOnlyPositions?:number};
 export function validateMark(token:Token,raw:unknown,blockTime:number|null,now=Date.now()):Mark{
@@ -25,14 +26,18 @@ export async function currentMarks(tokens:Token[]):Promise<Mark[]>{
   try{data=await paced('jupiter',process.env.JUPITER_API_KEY?1100:2100,()=>jsonRead('https://api.jup.ag/price/v3?ids='+batch.map(t=>t.mint).join(','),{headers:process.env.JUPITER_API_KEY?{'x-api-key':process.env.JUPITER_API_KEY}:{}})) as Record<string,unknown>;}catch{failed=true;/* Provider failure is not a missing mint price. */}
   const slots=[...new Set(batch.map(t=>(data[t.mint] as {blockId?:number})?.blockId).filter((s):s is number=>Number.isSafeInteger(s)))];
   const times=new Map<number,number|null>();
-  if(slots.length)try{const r=await paced('rpc',250,()=>jsonRead(process.env.SOLANA_RPC_URL||'https://api.mainnet.solana.com',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(slots.map((slot,id)=>({jsonrpc:'2.0',id,method:'getBlockTime',params:[slot]})))}));
-   if(Array.isArray(r))for(const v of r){if(Number.isInteger(v.id)&&slots[v.id]!==undefined)times.set(slots[v.id],typeof v.result==='number'?v.result:null);}
-  }catch{/* Unknown block time prevents freshness validation. */}
+  // Helius limits historical RPC batches other than getTransaction to ten items.
+  // Keep IDs local to each chunk; a failed chunk must not invalidate successful ones.
+  for(let start=0;start<slots.length;start+=10){const chunk=slots.slice(start,start+10);
+   try{const r=await paced('rpc',250,()=>jsonRead(process.env.SOLANA_RPC_URL||'https://api.mainnet.solana.com',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(chunk.map((slot,id)=>({jsonrpc:'2.0',id,method:'getBlockTime',params:[slot]})))}));
+    if(Array.isArray(r))for(const v of r){if(Number.isInteger(v.id)&&chunk[v.id]!==undefined)times.set(chunk[v.id],!v.error&&typeof v.result==='number'?v.result:null);}
+   }catch{/* Unknown block time prevents freshness validation for this chunk only. */}
+  }
   for(const t of batch){const v=data[t.mint] as {blockId?:number}|undefined,mark=validateMark(t,v,times.get(v?.blockId??-1)??null);marks.push(failed&&valuationEligible(t)?{...mark,code:'PRICE_PROVIDER_FAILED',reason:'Current price provider request failed'}:mark);}
  }
  return marks;
 }
-export function valuePositions(positions:Position[],marks:Mark[],coverage:boolean,now=Date.now(),onCoverage?:(position:string,result:PositionCoverage)=>void):Valuation{
+export function valuePositions(positions:Position[],marks:Mark[],coverage:boolean,now=Date.now(),onCoverage?:(position:string,result:PositionCoverage,value:PositionValuation)=>void):Valuation{
  const effective:Mark[]=marks.map(m=>m.status==='fresh'&&(m.at===null||now-m.at>120000||m.at>now+30000)?{...m,status:'stale',code:m.at===null?'PRICE_TIME_UNKNOWN':'PRICE_STALE',reason:'Price expired during aggregation'}:m);
  const reasonCounts:Partial<Record<CoverageCode,number>>={};
  const prices=new Map(effective.map(p=>[p.mint,p])),missing=new Set<string>();let principal=new D(0),fees=new D(0),valued=0,feeValued=0,expiresAt=now+120000;
@@ -52,10 +57,18 @@ export function valuePositions(positions:Position[],marks:Mark[],coverage:boolea
   // The partial subtotal includes only positions with all nonzero components priced.
   if(ok){principal=principal.plus(pv);valued++;}if(feeOk){fees=fees.plus(fv);feeValued++;}
   for(const code of new Set(issues.map(i=>i.code)))reasonCounts[code]=(reasonCounts[code]??0)+1;
-  onCoverage?.(p.address,{principal:ok,fees:feeOk,issues});
+  const positionMarks=[...new Set([p.x.mint,p.y.mint])].flatMap(m=>prices.has(m)?[prices.get(m)!]:[]);
+  const positionExpiry=Math.min(now+120000,p.updatedAt?p.updatedAt*1000+120000:now,...positionMarks.filter(m=>m.status==='fresh'&&m.at!==null).map(m=>m.at!+120000));
+  onCoverage?.(p.address,{principal:ok,fees:feeOk,issues},{principalUsd:ok?pv.toFixed():null,feesUsd:feeOk?fv.toFixed():null,at:now,expiresAt:positionExpiry,marks:positionMarks});
   if(ok||feeOk){if(p.updatedAt)expiresAt=Math.min(expiresAt,p.updatedAt*1000+120000);for(const t of [p.x,p.y]){const mark=prices.get(t.mint);if(mark?.status==='fresh'&&mark.at!==null)expiresAt=Math.min(expiresAt,mark.at+120000);}}
  }
  const sol=prices.get(SOL),solFresh=sol?.status==='fresh'&&sol.at!==null&&now-sol.at<=120000&&sol.at<=now+30000&&sol.usd;
  if(solFresh&&sol?.at)expiresAt=Math.min(expiresAt,sol.at+120000);
  return {principalUsd:principal.toFixed(),feesUsd:fees.toFixed(),principalSol:solFresh?principal.div(sol!.usd!).toFixed():null,feesSol:solFresh?fees.div(sol!.usd!).toFixed():null,valuedPositions:valued,feeValuedPositions:feeValued,totalPositions:positions.length,complete:coverage&&valued===positions.length,feesComplete:coverage&&feeValued===positions.length,unpricedMints:[...missing].slice(0,50),marks:effective.slice(0,50),at:now,expiresAt,markCount:marks.length,unpricedMintCount:missing.size,reasonCounts,valuationOnlyPositions:positions.filter(p=>[p.x,p.y].some(t=>!t.verified&&valuationEligible(t))).length};
+}
+// Reuse the same gates and arithmetic for individual rows and wallet totals.
+export function valuedPositions(positions:Position[],marks:Mark[],complete:boolean,now=Date.now()){
+ const values=new Map<string,{valuationCoverage:PositionCoverage;currentValuation:PositionValuation}>();
+ const valuation=valuePositions(positions,marks,complete,now,(key,valuationCoverage,currentValuation)=>values.set(key,{valuationCoverage,currentValuation}));
+ return {positions:positions.map(p=>({...p,...values.get(p.address)})),valuation};
 }

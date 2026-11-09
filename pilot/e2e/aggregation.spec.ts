@@ -1,7 +1,25 @@
 import {test,expect} from '@playwright/test';
 import {demoBrief} from '../lib/demo';
-import {valuePositions,type Mark} from '../lib/current-prices';
+import {valuePositions,valuedPositions,type Mark} from '../lib/current-prices';
 const wallet='ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM',id='d740fa64-c28d-4c41-9819-81096db09a11';
+
+test('position reference value expires visibly and refresh replaces it without requesting a swap',async({page})=>{
+ const now=Date.now();await page.clock.install({time:now});const base={...(await demoBrief()).position,updatedAt:Math.floor(now/1000)};let calls=0,quotes=0;
+ await page.route('**/api/positions',async r=>{
+  const time=now+(calls++?11000:0),tokens=[base.x,base.y];
+  const marks:Mark[]=tokens.map((t,i)=>({mint:t.mint,decimals:t.decimals,usd:i?'1':'100',slot:1,at:time,retrievedAt:time,status:'fresh',source:'Jupiter Price V3'}));
+  const p=valuedPositions([{...base,updatedAt:Math.floor(time/1000),inventory:calls>1?{x:'1',y:'20'}:base.inventory}],marks,false,time).positions[0];
+  if(calls===1)p.currentValuation!.expiresAt=now+10000;
+  return r.fulfill({json:{mode:'live',snapshotId:id,positions:[p],handles:{[p.address]:'synthetic-handle'},warnings:['Synthetic browser fixture, not a live observation.'],hasNextPools:false,poolPage:1,morePositions:[]}});
+ });
+ await page.route('**/api/brief',r=>{quotes++;return r.abort();});
+ await page.goto('/app');await page.getByLabel('Public Solana address').fill(wallet);await page.getByRole('button',{name:'Analyze',exact:true}).click();await page.locator('.portfolio-row').click();
+ const metric=page.locator('.position-metrics > div').first();await expect(metric).toContainText('$400');await expect(metric).toContainText('Unclaimed fees: $2 estimated');await expect(metric).toContainText('excludes unclaimed fees');
+ for(const width of [1440,834,390,320]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.screenshot({path:`var/local-validation/position-value-${width}.png`,fullPage:true});}
+ await page.clock.fastForward(11000);await expect(metric).toContainText('Reference valuation expired');await expect(metric.locator('strong')).toHaveText('Unavailable');
+ await page.getByRole('button',{name:'Refresh position',exact:true}).click();await expect(metric.locator('strong')).toHaveText('$120');expect(quotes).toBe(0);expect(calls).toBe(2);
+ await page.getByText('Valuation sources',{exact:true}).click();await expect(metric).toContainText('Jupiter Price V3');await expect(metric).toContainText('Not execution proceeds or historical P&L');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
 
 test('valuation expiry explains unavailable values while retaining snapshot-time coverage',async({page})=>{
  const now=Date.now();await page.clock.install({time:now});const p={...(await demoBrief()).position,updatedAt:Math.floor(now/1000)};

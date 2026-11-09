@@ -9,6 +9,7 @@ export type Position = {
   updatedAt: number | null; retrievedAt: number; poolTvlUsd: string | null; createdAt?: number | null;
   confidence: "indexed" | "limited"; warnings: string[]; sourceUrls: string[];
   valuationCoverage?: import('./current-prices').PositionCoverage;
+  currentValuation?: import('./current-prices').PositionValuation;
 };
 export type Quote = {
   input: Token; output: Token; inAtomic: string; outAtomic: string; minOutAtomic: string;
