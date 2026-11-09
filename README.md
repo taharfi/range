@@ -1,5 +1,7 @@
 # Jupiter × Meteora Research Engine
 
+2026-11-09: [one-position closed lifecycle reconciliation](CLOSED_POSITION_RECONCILIATION_PILOT.md) is available under Closed > Saved on-chain evidence. Token transfers/balances reconcile; historical USD P&L and allocated economic costs remain unavailable. The daily GitHub task passed an actual no-change scheduled run.
+
 Historical recovery, 2026-11-05: added a bounded, checkpointed Helius operator importer and reused the pinned DLMM decoder on an existing closed-position fixture. Recovered 13 transactions and decoded matching creation/closure events; cash flows and historical USD P&L remain unreconciled. See [implementation, evidence and reproduction](HELIUS_HISTORY_FOUNDATION.md). Portfolio UI and financial claims are unchanged.
 
 Local testing, 2026-11-05: the app is available on loopback when `npm start` is running. Run `npm run pilot:preflight -- 2026-11-05` from `pilot/` for the dated, read-only live check; the date is required. Fresh SOL/USDC EXIT/REBALANCE quotes and responsive screens were verified. See [start here](PILOT_START_HERE.md) and [current evidence](pilot/evidence/pilot-preflight-2026-11-05/README.md). No new product modules or public deployment.

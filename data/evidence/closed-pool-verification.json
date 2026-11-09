@@ -1,0 +1,152 @@
+{
+  "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+  "pool": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+  "capturedAt": "2026-11-09T14:49:26.708Z",
+  "source": "Helius finalized Solana RPC and Meteora pool metadata",
+  "signatures": [
+    {
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "slot": 460064315,
+      "err": null,
+      "blockTime": 1792678263,
+      "confirmationStatus": "finalized"
+    },
+    {
+      "signature": "57rQzgMMgzH21U1KDzv5oXpPTNRTeadCVgmfL9jY8BChNRyK8Ks7MVRaU8wfRpBki3ogdd7DPK3zAvQvhJcg5qAG",
+      "slot": 460064315,
+      "err": null,
+      "blockTime": 1792678263,
+      "confirmationStatus": "finalized"
+    },
+    {
+      "signature": "24FthWayHZvqpXU6r5rXuUTLHDKF14L8tEX5L5GMJrt5GVvJ5wouhWgeE19y2PW1FC9pid3icicis8oEhPksbezS",
+      "slot": 460064315,
+      "err": null,
+      "blockTime": 1792678263,
+      "confirmationStatus": "finalized"
+    },
+    {
+      "signature": "38Haj7xTfcUtT9X4R2uA32w4az3QnkVEhqpfP5oSVJ2QqU3LtmULHVdQz1wrd9kvHaYc1UgF7jYQNBsN1b8HTPv6",
+      "slot": 459962543,
+      "err": null,
+      "blockTime": 1792656661,
+      "confirmationStatus": "finalized"
+    },
+    {
+      "signature": "2AEpY7ewj1bUUUYCos92Jw4MMu6JrNobmZanpfZg64X3asewipporKbP57U9TY4uPcD2RVsXRVPdMKHsqku9MR4X",
+      "slot": 459962543,
+      "err": null,
+      "blockTime": 1792656661,
+      "confirmationStatus": "finalized"
+    },
+    {
+      "signature": "5bXKTLFePKRmiBT4CxNNSznsSQYUjBgwyNnKqVZHdo7izxvLojwa9r5Ffry6xCARran9avdbEhEYCNZcQ4PHqLkQ",
+      "slot": 459962543,
+      "err": null,
+      "blockTime": 1792656661,
+      "confirmationStatus": "finalized"
+    },
+    {
+      "signature": "3tFq3AxnEDk5TVLc8ZNpZrpgHouQuUykegjocqqMaW6WwYENDiQLFmxj6v2kYNFHpM6sc5iH7XnhjXABkvSsTWLF",
+      "slot": 459962495,
+      "err": null,
+      "blockTime": 1792656651,
+      "confirmationStatus": "finalized"
+    },
+    {
+      "signature": "3Xf14JCguSBswsyohmTkohsD17CzFb3nGYMxm8c9XNACtMBHb6wnrPLqGemTeKm6Psw1Cr725UoFo6CK1YFTfw2g",
+      "slot": 459962495,
+      "err": null,
+      "blockTime": 1792656651,
+      "confirmationStatus": "finalized"
+    },
+    {
+      "signature": "P8vq25btPBmtNBLiLd2Y3NmGqWPqyXSkD8paH1wKMYLuLtj5BkxNRPcCJnUB446BREGSmqT6uTkhHdj97ozkbSE",
+      "slot": 459962495,
+      "err": null,
+      "blockTime": 1792656651,
+      "confirmationStatus": "finalized"
+    },
+    {
+      "signature": "5A1cGnnPW2YJjgfkZ2h3hFtesDn3RjUcKHFayQ85z1BanUPh1RhRroxAx2AdbccUKTdYHH1xw2xi6d66wEenmmkF",
+      "slot": 459706312,
+      "err": null,
+      "blockTime": 1792602158,
+      "confirmationStatus": "finalized"
+    },
+    {
+      "signature": "54wthrnmUKjc64fmmrvqUEsQt4foDNFHafqYdxtM46TMBUmaikt2PEgBwnqkrtZ9vHPPYyqjHMcdkTfqBFsBtkRo",
+      "slot": 459706312,
+      "err": null,
+      "blockTime": 1792602158,
+      "confirmationStatus": "finalized"
+    },
+    {
+      "signature": "5tu5F9iYTCFFv86o8zfpzxzxFo1SJp2G7v8HhRcRHgesG4d5vS3FRsmbrBrJ1imUJbHYcq2F1mDmd2XVLopErfDV",
+      "slot": 459706312,
+      "err": null,
+      "blockTime": 1792602158,
+      "confirmationStatus": "finalized"
+    },
+    {
+      "signature": "5bNCY4padHPBYJCVuvj3vX2PU9Yt6o2qG4SRerSezBBeqQNVXCyBdnaLad445rTURQqNcJLCXgpHBdQdX7taWsJk",
+      "slot": 459706312,
+      "err": null,
+      "blockTime": 1792602158,
+      "confirmationStatus": "finalized"
+    }
+  ],
+  "poolAccount": {
+    "context": {
+      "slot": 467357027,
+      "apiVersion": "4.3.0-alpha.2"
+    },
+    "value": {
+      "lamports": 5242560,
+      "data": [
+        "IQsxYrVlsQ0QJ3gAsASIExAnAACQ0AMAiOT//3gbAADoAwACAAAAAJspAACLAgAAJf3//wAAAADJ2vFqAAAAAAAAAAAAAAAA/zIAAyT9//8yAAAAECcAAKoMyVwwAdenj7hcvHH03ZActnelE56QnJo41HZpHB3vBpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAFpjTKY+bJ8f1/jLkJTC4Q5farvZqHhWYMIYuUCUHiNdyPEkS2roIx4ai8bGebTPxjaDXJpwVpUFlZZkTUTKdK0X7RafAQAAACDRn4lAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQkufhPmTIG0FHrM6xS3PllqjV29hGfg4PbQGiTBSZ0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPg/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKscekDb45W9nO/quxULGuyIeVBGtHlUhnHfbIDthjwHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOauv7hTrLrUOpFWsyBhDVWgA4aS+9mSYB546l6ztKxQEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "base64"
+      ],
+      "owner": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+      "executable": false,
+      "rentEpoch": 18446744073709552000,
+      "space": 904
+    }
+  },
+  "positionAccount": {
+    "context": {
+      "slot": 467357027,
+      "apiVersion": "4.3.0-alpha.2"
+    },
+    "value": null
+  },
+  "metadata": {
+    "address": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+    "token_x": {
+      "address": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "name": "Aura Final Boss",
+      "symbol": "Kimchi",
+      "decimals": 6,
+      "is_verified": false,
+      "holders": 19897,
+      "freeze_authority_disabled": true,
+      "total_supply": 995693243.930355,
+      "price": 0.0022534990332545284,
+      "market_cap": 2243793.76261512
+    },
+    "token_y": {
+      "address": "So11111111111111111111111111111111111111112",
+      "name": "Wrapped SOL",
+      "symbol": "SOL",
+      "decimals": 9,
+      "is_verified": true,
+      "holders": 3820662,
+      "freeze_authority_disabled": true,
+      "total_supply": 636639246.9984534,
+      "price": 87.39852089593937,
+      "market_cap": 51563702127.79686
+    },
+    "reserve_x": "872ggadHDu1X1Vq4pk8GePDWLJNPTyTMi5tqpcmaoCNi",
+    "reserve_y": "3Qd7dip7qcCSRqrc6NJUdTSAcw9qvnRVhdZfug1Dg4WX"
+  }
+}

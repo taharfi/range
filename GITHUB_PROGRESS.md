@@ -10,7 +10,7 @@ Checked-in environment templates contain placeholders only. The Git commit ident
 
 ## Daily behavior
 
-The intended Windows Task Scheduler job is `RANGE Daily GitHub Progress`, daily at **20:00 Casablanca time**, using the signed-in Windows user's existing GitHub credentials. It runs `scripts/daily-github.ps1` with a hidden window and without storing a password, token or API key in the task definition. It needs the computer running, user signed in, network access, the existing `.venv` Python executable, Git, GitHub authentication and the local Gitleaks executable. Missed runs can start when the scheduler next permits; there is no cloud access to unpushed local work.
+The installed Windows Task Scheduler job is `RANGE Daily GitHub Progress`, daily at **20:00 Casablanca time**, using the signed-in Windows user's existing GitHub credentials. It runs `scripts/daily-github.ps1` with a hidden window and without storing a password, token or API key in the task definition. It needs the computer running, user signed in, network access, the existing `.venv` Python executable, Git, GitHub authentication and the local Gitleaks executable. Missed runs can start when the scheduler next permits; there is no cloud access to unpushed local work.
 
 It stages actual changes allowed by the exclusions, audits the full staged snapshot and Git history, creates a dated progress commit if content changed, and pushes `main` without force. Empty days produce no fabricated commits. It refuses to operate on other branches, divergent remotes or pre-existing staged work. Changes to publishing controls or new/changed binary assets require manual review. A stopped task does not imply that publishing succeeded; inspect its result/log.
 
@@ -32,3 +32,5 @@ Disable-ScheduledTask -TaskName 'RANGE Daily GitHub Progress'
 ```
 
 These safeguards reduce accidental exposure; they are not a guarantee that arbitrary future code/data can never contain sensitive information. Public commits are persistent, and binary assets require human privacy review. Daily checkpoints record progress, not test/deployment certification or evidence of real LP adoption.
+
+Verified 2026-11-09: an actual scheduled no-change run returned exit code 0 and created no empty commit. The reviewed safeguards now disable interactive authentication and bound Git/scanner durations. Logs identify safe run stages without printing credentials.

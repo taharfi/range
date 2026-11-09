@@ -1,0 +1,743 @@
+{
+  "version": 1,
+  "position": "BFj5cELThtyrcTkuX5PftKmbnbg5Ezo2zgYudG9v5dsN",
+  "owner": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+  "pool": "7ZvTsPCzoypD1x4cwGDhWCLG61GbMCF18TXwcMPsYLxg",
+  "quality": "token-flow-reconciled",
+  "tokens": {
+    "x": {
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "symbol": "Kimchi",
+      "decimals": 6
+    },
+    "y": {
+      "mint": "So11111111111111111111111111111111111111112",
+      "symbol": "SOL",
+      "decimals": 9
+    }
+  },
+  "verifiedAt": "2026-11-09T14:49:26.708Z",
+  "source": "Helius finalized transactions + Meteora metadata + pinned DLMM IDL",
+  "createdAt": 1792602158,
+  "closedAt": 1792678263,
+  "closureConfirmed": true,
+  "signatureSetMatched": true,
+  "queryExhausted": true,
+  "issues": [],
+  "transactionCount": 13,
+  "rawEventCount": 21,
+  "aliasPairsSuppressed": 3,
+  "totals": {
+    "x": {
+      "depositAtomic": "1090007341",
+      "withdrawalAtomic": "2180032122",
+      "feeAtomic": "55590854",
+      "deposit": "1090.007341",
+      "withdrawal": "2180.032122",
+      "fee": "55.590854"
+    },
+    "y": {
+      "depositAtomic": "299999992",
+      "withdrawalAtomic": "0",
+      "feeAtomic": "12046774",
+      "deposit": "0.299999992",
+      "withdrawal": "0",
+      "fee": "0.012046774"
+    }
+  },
+  "events": [
+    {
+      "signature": "5bNCY4padHPBYJCVuvj3vX2PU9Yt6o2qG4SRerSezBBeqQNVXCyBdnaLad445rTURQqNcJLCXgpHBdQdX7taWsJk",
+      "slot": 459706312,
+      "at": 1792602158,
+      "type": "PositionCreate",
+      "outerIndex": 1,
+      "innerIndex": 1
+    },
+    {
+      "signature": "5tu5F9iYTCFFv86o8zfpzxzxFo1SJp2G7v8HhRcRHgesG4d5vS3FRsmbrBrJ1imUJbHYcq2F1mDmd2XVLopErfDV",
+      "slot": 459706312,
+      "at": 1792602158,
+      "type": "Rebalancing",
+      "outerIndex": 7,
+      "innerIndex": 1
+    },
+    {
+      "signature": "54wthrnmUKjc64fmmrvqUEsQt4foDNFHafqYdxtM46TMBUmaikt2PEgBwnqkrtZ9vHPPYyqjHMcdkTfqBFsBtkRo",
+      "slot": 459706312,
+      "at": 1792602158,
+      "type": "Rebalancing",
+      "outerIndex": 6,
+      "innerIndex": 2
+    },
+    {
+      "signature": "5A1cGnnPW2YJjgfkZ2h3hFtesDn3RjUcKHFayQ85z1BanUPh1RhRroxAx2AdbccUKTdYHH1xw2xi6d66wEenmmkF",
+      "slot": 459706312,
+      "at": 1792602158,
+      "type": "CompositionFee",
+      "outerIndex": 5,
+      "innerIndex": 2
+    },
+    {
+      "signature": "5A1cGnnPW2YJjgfkZ2h3hFtesDn3RjUcKHFayQ85z1BanUPh1RhRroxAx2AdbccUKTdYHH1xw2xi6d66wEenmmkF",
+      "slot": 459706312,
+      "at": 1792602158,
+      "type": "Rebalancing",
+      "outerIndex": 5,
+      "innerIndex": 3
+    },
+    {
+      "signature": "P8vq25btPBmtNBLiLd2Y3NmGqWPqyXSkD8paH1wKMYLuLtj5BkxNRPcCJnUB446BREGSmqT6uTkhHdj97ozkbSE",
+      "slot": 459962495,
+      "at": 1792656651,
+      "type": "RemoveLiquidity",
+      "outerIndex": 3,
+      "innerIndex": 2
+    },
+    {
+      "signature": "3Xf14JCguSBswsyohmTkohsD17CzFb3nGYMxm8c9XNACtMBHb6wnrPLqGemTeKm6Psw1Cr725UoFo6CK1YFTfw2g",
+      "slot": 459962495,
+      "at": 1792656651,
+      "type": "RemoveLiquidity",
+      "outerIndex": 3,
+      "innerIndex": 2
+    },
+    {
+      "signature": "3tFq3AxnEDk5TVLc8ZNpZrpgHouQuUykegjocqqMaW6WwYENDiQLFmxj6v2kYNFHpM6sc5iH7XnhjXABkvSsTWLF",
+      "slot": 459962495,
+      "at": 1792656651,
+      "type": "RemoveLiquidity",
+      "outerIndex": 3,
+      "innerIndex": 2
+    },
+    {
+      "signature": "5bXKTLFePKRmiBT4CxNNSznsSQYUjBgwyNnKqVZHdo7izxvLojwa9r5Ffry6xCARran9avdbEhEYCNZcQ4PHqLkQ",
+      "slot": 459962543,
+      "at": 1792656661,
+      "type": "Rebalancing",
+      "outerIndex": 6,
+      "innerIndex": 1
+    },
+    {
+      "signature": "2AEpY7ewj1bUUUYCos92Jw4MMu6JrNobmZanpfZg64X3asewipporKbP57U9TY4uPcD2RVsXRVPdMKHsqku9MR4X",
+      "slot": 459962543,
+      "at": 1792656661,
+      "type": "Rebalancing",
+      "outerIndex": 6,
+      "innerIndex": 1
+    },
+    {
+      "signature": "38Haj7xTfcUtT9X4R2uA32w4az3QnkVEhqpfP5oSVJ2QqU3LtmULHVdQz1wrd9kvHaYc1UgF7jYQNBsN1b8HTPv6",
+      "slot": 459962543,
+      "at": 1792656661,
+      "type": "Rebalancing",
+      "outerIndex": 5,
+      "innerIndex": 1
+    },
+    {
+      "signature": "24FthWayHZvqpXU6r5rXuUTLHDKF14L8tEX5L5GMJrt5GVvJ5wouhWgeE19y2PW1FC9pid3icicis8oEhPksbezS",
+      "slot": 460064315,
+      "at": 1792678263,
+      "type": "RemoveLiquidity",
+      "outerIndex": 5,
+      "innerIndex": 2
+    },
+    {
+      "signature": "24FthWayHZvqpXU6r5rXuUTLHDKF14L8tEX5L5GMJrt5GVvJ5wouhWgeE19y2PW1FC9pid3icicis8oEhPksbezS",
+      "slot": 460064315,
+      "at": 1792678263,
+      "type": "ClaimFee2",
+      "outerIndex": 6,
+      "innerIndex": 3
+    },
+    {
+      "signature": "57rQzgMMgzH21U1KDzv5oXpPTNRTeadCVgmfL9jY8BChNRyK8Ks7MVRaU8wfRpBki3ogdd7DPK3zAvQvhJcg5qAG",
+      "slot": 460064315,
+      "at": 1792678263,
+      "type": "RemoveLiquidity",
+      "outerIndex": 5,
+      "innerIndex": 2
+    },
+    {
+      "signature": "57rQzgMMgzH21U1KDzv5oXpPTNRTeadCVgmfL9jY8BChNRyK8Ks7MVRaU8wfRpBki3ogdd7DPK3zAvQvhJcg5qAG",
+      "slot": 460064315,
+      "at": 1792678263,
+      "type": "ClaimFee2",
+      "outerIndex": 6,
+      "innerIndex": 3
+    },
+    {
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "slot": 460064315,
+      "at": 1792678263,
+      "type": "RemoveLiquidity",
+      "outerIndex": 5,
+      "innerIndex": 2
+    },
+    {
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "slot": 460064315,
+      "at": 1792678263,
+      "type": "ClaimFee2",
+      "outerIndex": 6,
+      "innerIndex": 3
+    },
+    {
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "slot": 460064315,
+      "at": 1792678263,
+      "type": "PositionClose",
+      "outerIndex": 7,
+      "innerIndex": 0
+    }
+  ],
+  "flows": [
+    {
+      "kind": "deposit",
+      "mint": "So11111111111111111111111111111111111111112",
+      "atomic": "147887320",
+      "decimals": 9,
+      "time": 1792602158,
+      "signature": "5tu5F9iYTCFFv86o8zfpzxzxFo1SJp2G7v8HhRcRHgesG4d5vS3FRsmbrBrJ1imUJbHYcq2F1mDmd2XVLopErfDV",
+      "outer_index": 7,
+      "inner_index": 1
+    },
+    {
+      "kind": "deposit",
+      "mint": "So11111111111111111111111111111111111111112",
+      "atomic": "147887320",
+      "decimals": 9,
+      "time": 1792602158,
+      "signature": "54wthrnmUKjc64fmmrvqUEsQt4foDNFHafqYdxtM46TMBUmaikt2PEgBwnqkrtZ9vHPPYyqjHMcdkTfqBFsBtkRo",
+      "outer_index": 6,
+      "inner_index": 2
+    },
+    {
+      "kind": "deposit",
+      "mint": "So11111111111111111111111111111111111111112",
+      "atomic": "4225352",
+      "decimals": 9,
+      "time": 1792602158,
+      "signature": "5A1cGnnPW2YJjgfkZ2h3hFtesDn3RjUcKHFayQ85z1BanUPh1RhRroxAx2AdbccUKTdYHH1xw2xi6d66wEenmmkF",
+      "outer_index": 5,
+      "inner_index": 3
+    },
+    {
+      "kind": "withdrawal",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "atomic": "633004379",
+      "decimals": 6,
+      "time": 1792656651,
+      "signature": "P8vq25btPBmtNBLiLd2Y3NmGqWPqyXSkD8paH1wKMYLuLtj5BkxNRPcCJnUB446BREGSmqT6uTkhHdj97ozkbSE",
+      "outer_index": 3,
+      "inner_index": 2
+    },
+    {
+      "kind": "withdrawal",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "atomic": "446452479",
+      "decimals": 6,
+      "time": 1792656651,
+      "signature": "3Xf14JCguSBswsyohmTkohsD17CzFb3nGYMxm8c9XNACtMBHb6wnrPLqGemTeKm6Psw1Cr725UoFo6CK1YFTfw2g",
+      "outer_index": 3,
+      "inner_index": 2
+    },
+    {
+      "kind": "withdrawal",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "atomic": "10550834",
+      "decimals": 6,
+      "time": 1792656651,
+      "signature": "3tFq3AxnEDk5TVLc8ZNpZrpgHouQuUykegjocqqMaW6WwYENDiQLFmxj6v2kYNFHpM6sc5iH7XnhjXABkvSsTWLF",
+      "outer_index": 3,
+      "inner_index": 2
+    },
+    {
+      "kind": "deposit",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "atomic": "632968120",
+      "decimals": 6,
+      "time": 1792656661,
+      "signature": "5bXKTLFePKRmiBT4CxNNSznsSQYUjBgwyNnKqVZHdo7izxvLojwa9r5Ffry6xCARran9avdbEhEYCNZcQ4PHqLkQ",
+      "outer_index": 6,
+      "inner_index": 1
+    },
+    {
+      "kind": "deposit",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "atomic": "446434247",
+      "decimals": 6,
+      "time": 1792656661,
+      "signature": "2AEpY7ewj1bUUUYCos92Jw4MMu6JrNobmZanpfZg64X3asewipporKbP57U9TY4uPcD2RVsXRVPdMKHsqku9MR4X",
+      "outer_index": 6,
+      "inner_index": 1
+    },
+    {
+      "kind": "deposit",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "atomic": "10604974",
+      "decimals": 6,
+      "time": 1792656661,
+      "signature": "38Haj7xTfcUtT9X4R2uA32w4az3QnkVEhqpfP5oSVJ2QqU3LtmULHVdQz1wrd9kvHaYc1UgF7jYQNBsN1b8HTPv6",
+      "outer_index": 5,
+      "inner_index": 1
+    },
+    {
+      "kind": "withdrawal",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "atomic": "632985209",
+      "decimals": 6,
+      "time": 1792678263,
+      "signature": "24FthWayHZvqpXU6r5rXuUTLHDKF14L8tEX5L5GMJrt5GVvJ5wouhWgeE19y2PW1FC9pid3icicis8oEhPksbezS",
+      "outer_index": 5,
+      "inner_index": 2
+    },
+    {
+      "kind": "fee",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "atomic": "46527009",
+      "decimals": 6,
+      "time": 1792678263,
+      "signature": "24FthWayHZvqpXU6r5rXuUTLHDKF14L8tEX5L5GMJrt5GVvJ5wouhWgeE19y2PW1FC9pid3icicis8oEhPksbezS",
+      "outer_index": 6,
+      "inner_index": 3
+    },
+    {
+      "kind": "fee",
+      "mint": "So11111111111111111111111111111111111111112",
+      "atomic": "10043580",
+      "decimals": 9,
+      "time": 1792678263,
+      "signature": "24FthWayHZvqpXU6r5rXuUTLHDKF14L8tEX5L5GMJrt5GVvJ5wouhWgeE19y2PW1FC9pid3icicis8oEhPksbezS",
+      "outer_index": 6,
+      "inner_index": 3
+    },
+    {
+      "kind": "withdrawal",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "atomic": "446434247",
+      "decimals": 6,
+      "time": 1792678263,
+      "signature": "57rQzgMMgzH21U1KDzv5oXpPTNRTeadCVgmfL9jY8BChNRyK8Ks7MVRaU8wfRpBki3ogdd7DPK3zAvQvhJcg5qAG",
+      "outer_index": 5,
+      "inner_index": 2
+    },
+    {
+      "kind": "fee",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "atomic": "8923129",
+      "decimals": 6,
+      "time": 1792678263,
+      "signature": "57rQzgMMgzH21U1KDzv5oXpPTNRTeadCVgmfL9jY8BChNRyK8Ks7MVRaU8wfRpBki3ogdd7DPK3zAvQvhJcg5qAG",
+      "outer_index": 6,
+      "inner_index": 3
+    },
+    {
+      "kind": "fee",
+      "mint": "So11111111111111111111111111111111111111112",
+      "atomic": "1968720",
+      "decimals": 9,
+      "time": 1792678263,
+      "signature": "57rQzgMMgzH21U1KDzv5oXpPTNRTeadCVgmfL9jY8BChNRyK8Ks7MVRaU8wfRpBki3ogdd7DPK3zAvQvhJcg5qAG",
+      "outer_index": 6,
+      "inner_index": 3
+    },
+    {
+      "kind": "withdrawal",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "atomic": "10604974",
+      "decimals": 6,
+      "time": 1792678263,
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "outer_index": 5,
+      "inner_index": 2
+    },
+    {
+      "kind": "fee",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "atomic": "140716",
+      "decimals": 6,
+      "time": 1792678263,
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "outer_index": 6,
+      "inner_index": 3
+    },
+    {
+      "kind": "fee",
+      "mint": "So11111111111111111111111111111111111111112",
+      "atomic": "34474",
+      "decimals": 9,
+      "time": 1792678263,
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "outer_index": 6,
+      "inner_index": 3
+    }
+  ],
+  "transactions": [
+    {
+      "signature": "5bNCY4padHPBYJCVuvj3vX2PU9Yt6o2qG4SRerSezBBeqQNVXCyBdnaLad445rTURQqNcJLCXgpHBdQdX7taWsJk",
+      "slot": 459706312,
+      "at": 1792602158,
+      "feeLamports": "10000",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "0",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "0",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "signature": "5tu5F9iYTCFFv86o8zfpzxzxFo1SJp2G7v8HhRcRHgesG4d5vS3FRsmbrBrJ1imUJbHYcq2F1mDmd2XVLopErfDV",
+      "slot": 459706312,
+      "at": 1792602158,
+      "feeLamports": "145000",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "0",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "147887320",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "147887320",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "147887320",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "signature": "54wthrnmUKjc64fmmrvqUEsQt4foDNFHafqYdxtM46TMBUmaikt2PEgBwnqkrtZ9vHPPYyqjHMcdkTfqBFsBtkRo",
+      "slot": 459706312,
+      "at": 1792602158,
+      "feeLamports": "145000",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "0",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "147887320",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "147887320",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "147887320",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "signature": "5A1cGnnPW2YJjgfkZ2h3hFtesDn3RjUcKHFayQ85z1BanUPh1RhRroxAx2AdbccUKTdYHH1xw2xi6d66wEenmmkF",
+      "slot": 459706312,
+      "at": 1792602158,
+      "feeLamports": "145000",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "0",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "4225352",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "4225352",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "4225352",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "signature": "P8vq25btPBmtNBLiLd2Y3NmGqWPqyXSkD8paH1wKMYLuLtj5BkxNRPcCJnUB446BREGSmqT6uTkhHdj97ozkbSE",
+      "slot": 459962495,
+      "at": 1792656651,
+      "feeLamports": "61545",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "633004379",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "633004379",
+          "balanceDeltaAtomic": "-633004379",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "0",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "signature": "3Xf14JCguSBswsyohmTkohsD17CzFb3nGYMxm8c9XNACtMBHb6wnrPLqGemTeKm6Psw1Cr725UoFo6CK1YFTfw2g",
+      "slot": 459962495,
+      "at": 1792656651,
+      "feeLamports": "60794",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "446452479",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "446452479",
+          "balanceDeltaAtomic": "-446452479",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "0",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "signature": "3tFq3AxnEDk5TVLc8ZNpZrpgHouQuUykegjocqqMaW6WwYENDiQLFmxj6v2kYNFHpM6sc5iH7XnhjXABkvSsTWLF",
+      "slot": 459962495,
+      "at": 1792656651,
+      "feeLamports": "145000",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "10550834",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "10550834",
+          "balanceDeltaAtomic": "-10550834",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "0",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "signature": "5bXKTLFePKRmiBT4CxNNSznsSQYUjBgwyNnKqVZHdo7izxvLojwa9r5Ffry6xCARran9avdbEhEYCNZcQ4PHqLkQ",
+      "slot": 459962543,
+      "at": 1792656661,
+      "feeLamports": "125900",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "632968120",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "632968120",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "632968120",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "0",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "signature": "2AEpY7ewj1bUUUYCos92Jw4MMu6JrNobmZanpfZg64X3asewipporKbP57U9TY4uPcD2RVsXRVPdMKHsqku9MR4X",
+      "slot": 459962543,
+      "at": 1792656661,
+      "feeLamports": "125600",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "446434247",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "446434247",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "446434247",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "0",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "signature": "38Haj7xTfcUtT9X4R2uA32w4az3QnkVEhqpfP5oSVJ2QqU3LtmULHVdQz1wrd9kvHaYc1UgF7jYQNBsN1b8HTPv6",
+      "slot": 459962543,
+      "at": 1792656661,
+      "feeLamports": "105600",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "10604974",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "10604974",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "10604974",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "0",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "0",
+          "balanceDeltaAtomic": "0",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "signature": "24FthWayHZvqpXU6r5rXuUTLHDKF14L8tEX5L5GMJrt5GVvJ5wouhWgeE19y2PW1FC9pid3icicis8oEhPksbezS",
+      "slot": 460064315,
+      "at": 1792678263,
+      "feeLamports": "66804",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "679512218",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "679512218",
+          "balanceDeltaAtomic": "-679512218",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "10043580",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "10043580",
+          "balanceDeltaAtomic": "-10043580",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "signature": "57rQzgMMgzH21U1KDzv5oXpPTNRTeadCVgmfL9jY8BChNRyK8Ks7MVRaU8wfRpBki3ogdd7DPK3zAvQvhJcg5qAG",
+      "slot": 460064315,
+      "at": 1792678263,
+      "feeLamports": "57824",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "455357376",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "455357376",
+          "balanceDeltaAtomic": "-455357376",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "1968720",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "1968720",
+          "balanceDeltaAtomic": "-1968720",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "signature": "4JT9CwjSPPJvWr1fmDgS1HupjBVtoaut48yzNev7hcWKVH6ALcxu7rBXUyrvp39FbXmhT29vmiL7JHnDafMTQ4gD",
+      "slot": 460064315,
+      "at": 1792678263,
+      "feeLamports": "145000",
+      "feePayer": "ACUvKyTc7dEwR8oMqUZd5xpj19osaFZoXPauuy52adQM",
+      "sides": [
+        {
+          "side": "x",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "10745690",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "10745690",
+          "balanceDeltaAtomic": "-10745690",
+          "matches": true
+        },
+        {
+          "side": "y",
+          "depositAtomic": "0",
+          "withdrawalAndFeeAtomic": "34474",
+          "reserveInAtomic": "0",
+          "reserveOutAtomic": "34474",
+          "balanceDeltaAtomic": "-34474",
+          "matches": true
+        }
+      ]
+    }
+  ],
+  "unmatchedEvents": [],
+  "retainedNonTransferInstructions": {
+    "17": 6,
+    "9": 8,
+    "21": 9,
+    "22": 9,
+    "18": 9
+  },
+  "observedTransactionFeesLamports": "1339067",
+  "costAllocationComplete": false,
+  "historicalUsdPnl": null,
+  "holdBenchmarkUsd": null,
+  "coverage": "Provider-returned position signature set; not complete wallet history or independent provider agreement",
+  "idlSha256": "9b35628fcf9a60d1ca4abea8fe6aae93f91d1c70606292ed8a721bf39c4a6919"
+}
