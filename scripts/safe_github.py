@@ -12,6 +12,10 @@ import sys
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
+# Unattended checkpoints must fail rather than opening an invisible login prompt.
+os.environ['GIT_TERMINAL_PROMPT'] = '0'
+os.environ['GCM_INTERACTIVE'] = 'Never'
+os.environ['GH_PROMPT_DISABLED'] = '1'
 GIT_DIR = ROOT / '.git'
 CONTROL_FILES = ['.gitignore', '.gitleaksignore', '.gitleaks.toml', 'scripts/safe_github.py',
                  'scripts/daily-github.ps1', '.githooks/pre-commit', '.githooks/pre-push']
@@ -22,7 +26,7 @@ MAX_BYTES = 10_000_000
 
 
 def git(*args, check=True):
-    result = subprocess.run(['git', '-C', str(ROOT), *args], capture_output=True, check=False)
+    result = subprocess.run(['git', '-C', str(ROOT), *args], capture_output=True, check=False, timeout=120)
     if check and result.returncode:
         raise RuntimeError('Git operation failed: ' + args[0] + ' (details withheld).')
     return result
@@ -79,7 +83,7 @@ def run_scanner(binary, kind, target, report, extra=()):
     result = subprocess.run([binary, kind, str(target), '--redact', '--no-banner', '--no-color',
                              '--config', str(ROOT / '.gitleaks.toml'),
                              '--ignore-gitleaks-allow', '--report-format', 'json', '--report-path', str(report),
-                             '--gitleaks-ignore-path', str(ROOT / '.gitleaksignore'), *extra], capture_output=True)
+                             '--gitleaks-ignore-path', str(ROOT / '.gitleaksignore'), '--timeout', '60', *extra], capture_output=True, timeout=90)
     if result.returncode:
         count = len(json.loads(report.read_text())) if report.exists() else 'unknown'
         raise RuntimeError(f'Secret scan blocked publishing ({count} findings). Redacted report stays in .git/range-security/.')
@@ -95,7 +99,7 @@ def audit():
     files = 0
     entries = [entry for entry in entries if entry]
     object_ids = [entry.split(b'\t', 1)[0].split()[1] for entry in entries]
-    batch = subprocess.run(['git', '-C', str(ROOT), 'cat-file', '--batch'], input=b'\n'.join(object_ids)+b'\n', capture_output=True, check=True).stdout
+    batch = subprocess.run(['git', '-C', str(ROOT), 'cat-file', '--batch'], input=b'\n'.join(object_ids)+b'\n', capture_output=True, check=True, timeout=60).stdout
     offset = 0
     local_config = GIT_DIR / 'range-daily.json'
     approved_binaries = json.loads(local_config.read_text()).get('binaryHashes', {}) if local_config.exists() else None
@@ -142,6 +146,7 @@ def control_hashes():
 
 
 def snapshot():
+    print('Checking publishing controls and branch.', flush=True)
     config = json.loads((GIT_DIR / 'range-daily.json').read_text())
     if control_hashes() != config['controlHashes']:
         raise RuntimeError('Publishing safeguards changed; manual review required before daily push.')
@@ -151,15 +156,18 @@ def snapshot():
         raise RuntimeError('Remote changed; daily publishing blocked.')
     if git('diff', '--cached', '--quiet', check=False).returncode:
         raise RuntimeError('Existing staged work needs manual review; daily publishing stopped.')
+    print('Fetching remote main without interactive login.', flush=True)
     git('fetch', '--quiet', 'origin', 'main')
     if git('merge-base', '--is-ancestor', 'origin/main', 'HEAD', check=False).returncode:
         raise RuntimeError('Remote has divergent/new commits; resolve manually. No merge or force push attempted.')
     if git('status', '--porcelain', '-z', '--untracked-files=all').stdout:
         git('add', '-A')
+        print('Auditing changed source snapshot.', flush=True)
         audit()
         if git('diff', '--cached', '--quiet', check=False).returncode:
-            subprocess.run(['git', '-C', str(ROOT), 'commit', '-m', 'chore: RANGE progress checkpoint ' + datetime.now().strftime('%Y-%m-%d')], check=True)
+            subprocess.run(['git', '-C', str(ROOT), 'commit', '-m', 'chore: RANGE progress checkpoint ' + datetime.now().strftime('%Y-%m-%d')], check=True, timeout=180)
     else:
+        print('Auditing unchanged source snapshot.', flush=True)
         audit()
     if git('rev-parse', 'HEAD').stdout != git('rev-parse', 'origin/main').stdout:
         # Hooks rescan the full staged snapshot/history immediately before push.
